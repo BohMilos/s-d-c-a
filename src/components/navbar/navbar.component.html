@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <div class="container">
+      <div class="brand">My ChatApp</div>
+      <ul class="nav-links">
+        <li>{{ clickCount }} klikov</li>
+        <li>{{ messageLength }} znakov</li>
+        <li>{{ chatInstancesLength }} četov</li>
+        <li *ngIf="loggedInUser">
+          Prihlásený užívateľ: {{ loggedInUser.firstName }}
+          {{ loggedInUser.lastName }}
+        </li>
+        <li>Čas prihlásenia: {{ loginTime }}</li>
+        <li><button (click)="logout()">Logout</button></li>
+      </ul>
+    </div>
+  </nav>
