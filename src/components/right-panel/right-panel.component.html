@@ -1,0 +1,28 @@
+<div class="right-panel">
+    <div class="chat-history">
+      <div
+        *ngFor="let message of chatHistory"
+        class="message"
+        [ngClass]="{
+          'user-message': message.sender === 'Me',
+          'recipient-message': message.sender !== 'Me'
+        }"
+      >
+        <p class="message-sender">{{ message.sender }}:</p>
+        <p class="message-text server-response">{{ message.text }}</p>
+        <p class="message-timestamp">{{ message.timestamp | date : 'short' }}</p>
+      </div>
+    </div>
+  
+    <div class="message-input">
+      <textarea
+        [(ngModel)]="newMessage"
+        placeholder="Type your message here..."
+        (keydown.enter)="sendMessage()"
+      ></textarea>
+      <br />
+      <button (click)="sendMessage()">Send</button>
+      <button class="clear-chat-button" (click)="endChat()">End Chat</button>
+    </div>
+  </div>
+  

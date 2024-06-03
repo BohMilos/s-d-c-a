@@ -1,0 +1,44 @@
+.right-panel {
+    width: 100%; /* Adjust width as needed */
+    background-color: #f9f9f9;
+    border-left: 1px solid #ccc; /* Add border for separation */
+  }
+  
+  .chat-history {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  p{
+    margin: 2px;
+  }
+  
+  .message-sender {
+    margin: 0;
+  }
+  
+  .user-message {
+    text-align: right;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .recipient-message p.server-response {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .recepient-message{
+    text-align: left;
+  }
+  
+  .message-timestamp{
+    margin-top: -2px;
+    font-size: 13px;
+    color: red;
+    font-weight: 200;
+  }
+  
+  /*.message-input {
+
+  }*/
