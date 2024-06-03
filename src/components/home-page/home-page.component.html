@@ -1,0 +1,21 @@
+<div class="container">
+    <app-navbar [messageLength]="messageLength"
+    [chatInstancesLength]="chatInstances.length"></app-navbar>
+    <div class="panels">
+        <app-left-panel
+        class="left"
+        (userSelected)="onUserSelected($event)"
+        (chatStarted)="toggleChat($event)"
+        [rightPanel]="rightPanel"></app-left-panel>
+        <app-middle-panel
+        class="middle"
+        [selectedUser]="selectedUser"
+        [chatInstances]="chatInstances"></app-middle-panel>
+        <app-right-panel
+        *ngIf="isChatStarted"
+        (chatInstancesUpdated)="updateChatInstances($event)"
+        (messageLengthAdd)="updateMessageLength($event)"
+        class="right"
+        #rightPanel></app-right-panel>
+    </div>
+</div>
