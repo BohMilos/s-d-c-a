@@ -1,0 +1,74 @@
+<div class="middle-panel">
+    <div *ngIf="showDetails" class="details">
+      <div *ngIf="detailedUserInfo">
+        <p><img src="{{ detailedUserInfo.image }}" /></p>
+        <p>Meno: {{ detailedUserInfo.firstName }}</p>
+        <p>Priezvisko: {{ detailedUserInfo.lastName }}</p>
+        <p>Užívateľské meno: {{ detailedUserInfo.username }}</p>
+        <p>Dátum narodenia: {{ detailedUserInfo.birthDate }}</p>
+        <p>Farba očí: {{ detailedUserInfo.eyeColor }}</p>
+        <p>Univerzita: {{ detailedUserInfo.university }}</p>
+        <p>IP Adresa: {{ detailedUserInfo.ip }}</p>
+        <p>Mac Adresa: {{ detailedUserInfo.macAddress }}</p>
+        <p>Mesto: {{ detailedUserInfo.address.city }}</p>
+        <div *ngIf="testGenderInfo">
+          <p>Test Pohlavia: {{ testGenderInfo.gender }}</p>
+          <p>Pravdepodobnosť: {{ testGenderInfo.probability * 100 }}%</p>
+          <p>Počet: {{ testGenderInfo.count }}</p>
+        </div>
+  
+        <div *ngIf="userPostalInfo">
+          <button (click)="togglePostalInfo()">Toggle Postal Info</button>
+          <div *ngIf="showPostalInfo">
+            <ul class="postal-info">
+              <li>PSČ: {{ userPostalInfo['post code'] }}</li>
+              <li>Krajina: {{ userPostalInfo.country }}</li>
+              <li>
+                Skratka krajiny: {{ userPostalInfo['country abbreviation'] }}
+              </li>
+              <li *ngFor="let place of userPostalInfo.places">
+                <ul>
+                  <li>Place Name: {{ place['place name'] }}</li>
+                  <li>State: {{ place.state }}</li>
+                  <li>State Abbreviation: {{ place['state abbreviation'] }}</li>
+                  <li>Longitude: {{ place.longitude }}</li>
+                  <li>Latitude: {{ place.latitude }}</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <button (click)="toggleDetails()" class="details">Toggle User Details</button>
+  
+    <div *ngIf="!showDetails" class="details">
+      <div *ngIf="chatInstances && chatInstances.length > 0">
+        <h2>Chats:</h2>
+        <br />
+        <div *ngFor="let instance of chatInstances; let i = index">
+          <br />
+          <h3>Chat: #{{ i + 1 }}</h3>
+          <div *ngFor="let interaction of instance">
+            <div *ngIf="interaction.sender === 'Me'" class="user-message">
+              <p>Me: {{ interaction.text }}</p>
+              <p class="message-timestamp">
+                {{ interaction.timestamp | date : 'short' }}
+              </p>
+            </div>
+            <div *ngIf="interaction.sender !== 'Me'" class="server-message">
+              <p>{{ interaction.sender }}: {{ interaction.text }}</p>
+              <p class="message-timestamp">
+                {{ interaction.timestamp | date : 'short' }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div *ngIf="!chatInstances || chatInstances.length === 0">
+        No chats available.
+      </div>
+    </div>
+  </div>

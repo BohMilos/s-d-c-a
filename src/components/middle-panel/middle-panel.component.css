@@ -1,0 +1,33 @@
+* {
+    margin-left: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .middle-panel {
+    flex: 1;
+    background-color: #eaeaea;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .details {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  
+  .postal-info {
+    list-style-type: none;
+  }
+  
+  .postal-info li {
+    margin-left: 0;
+  }
+  
+  .message-timestamp {
+    margin-top: -15px;
+    color: red;
+    font-weight: 200;
+  }
