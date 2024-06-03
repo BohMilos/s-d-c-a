@@ -1,0 +1,16 @@
+<html>
+  <div class="left-panel">
+    <div *ngFor="let user of users" class="user-info">
+      <button (click)="toggleButtons(user)" class="left-panel-users">
+        {{ user.firstName }} {{ user.lastName }} - <br />
+        {{ user.email }}
+      </button>
+      <div *ngIf="user.showButtons" class="start-and-details">
+        <button (click)="showDetails(user)" class="detail">
+          Zobraz detail
+        </button>
+        <button (click)="startChat(user)" class="chat">Začni chat</button>
+      </div>
+    </div>
+  </div>
+</html>
