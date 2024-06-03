@@ -1,1 +1,15 @@
-/* Add application styles & imports to this file! */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,100;1,200&family=Quicksand:wght@300&display=swap');
+
+
+body{
+  margin: 0;
+  font-family: "Poppins", sans-serif ;
+}
+
+button{
+  font-family: "Poppins", sans-serif ;
+}
+
+img{
+  border-radius: 50%;
+}

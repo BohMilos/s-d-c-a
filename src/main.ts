@@ -1,17 +1,7 @@
-import { Component } from '@angular/core';
-import { bootstrapApplication } from '@angular/platform-browser';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
 import 'zone.js';
 
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  template: `
-  <p style=font-weight:900;> Work In Progress
-  </p>
-  `,
-})
-export class App {
-  name = 'Sui';
-}
-
-bootstrapApplication(App);
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .catch((err) => console.error(err));
