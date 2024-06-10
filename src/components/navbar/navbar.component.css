@@ -1,5 +1,5 @@
 .navbar {
-    background-color: black;
+    background-color: gray;
     color: #fff;
     padding: 10px 0;
   }
@@ -38,4 +38,15 @@
   
   .nav-links li a:hover {
     text-decoration: underline;
+  }
+
+  .logout{
+    border-radius: 5%;
+    background-color: white;
+  }
+
+  .logout:hover{
+    border-radius: 5%;
+    background-color: gray;
+    color: white;
   }

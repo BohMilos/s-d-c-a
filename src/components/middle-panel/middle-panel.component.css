@@ -22,6 +22,7 @@
     margin-left: 12px;
     margin-right: 12px;
     background-color: white;
+    border-radius: 5%;
   }
   
   .details-button:hover{

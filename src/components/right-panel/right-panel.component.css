@@ -7,6 +7,7 @@
   .chat-history {
     padding-left: 10px;
     padding-right: 10px;
+    border-radius: 5%;
   }
   
   p{
@@ -42,3 +43,24 @@
   /*.message-input {
 
   }*/
+
+  .send{
+    border-radius: 5%;
+    background-color: white;
+  }
+
+  .send:hover{
+    background-color: gray;
+    color: white;
+  }
+
+  .clear-chat-button{
+    background-color: white;
+    border-radius: 5%;
+  }
+
+  .clear-chat-button{
+    border-radius: 5%;
+    background-color: gray;
+    color: white;
+  }

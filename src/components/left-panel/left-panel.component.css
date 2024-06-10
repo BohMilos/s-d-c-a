@@ -24,18 +24,22 @@
   
   .detail {
     background-color: white;
+    border-radius: 5%;
   }
   
   .detail:hover {
     background-color: gray;
     color: white;
+    border-radius: 5%;
   }
   
   .chat {
     background-color: white;
+    border-radius: 5%;
   }
   
   .chat:hover {
     background-color: gray;
     color: white;
+    border-radius: 5%;
   }
