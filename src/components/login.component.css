@@ -16,7 +16,11 @@
     color: white;
 }
 
-.usern{
+.name{
+    width: 100%;
+}
+
+.surname{
     width: 100%;
 }
 

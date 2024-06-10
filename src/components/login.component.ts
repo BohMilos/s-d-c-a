@@ -8,7 +8,8 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  username: string = '';
+  firstName: string = '';
+  lastName: string = '';
   password: string = '';
   errorMessage: string = '';
   showPasswordField: boolean = false;
@@ -16,8 +17,8 @@ export class LoginComponent {
   constructor(private userService: UserService, private router: Router) {}
 
   login() {
-    if (!this.username || !this.password) {
-      this.errorMessage = 'Please enter both username and password.';
+    if (!this.firstName || !this.lastName || !this.password) {
+      this.errorMessage = 'Please enter first name, last name, and password.';
       return;
     }
 
@@ -27,7 +28,9 @@ export class LoginComponent {
         console.log('Users received:', users);
         const user = users.find(
           (u: any) =>
-            u.username === this.username && u.password === this.password
+            u.firstName === this.firstName &&
+            u.lastName === this.lastName &&
+            u.password === this.password
         );
         if (user) {
           // Start a session and store user ID
@@ -35,7 +38,7 @@ export class LoginComponent {
           // Navigate to home page upon successful login
           this.router.navigate(['/home']);
         } else {
-          this.errorMessage = 'Invalid username or password.';
+          this.errorMessage = 'Invalid first name, last name, or password.';
         }
       },
       error: (error: any) => {

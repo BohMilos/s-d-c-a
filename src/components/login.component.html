@@ -1,34 +1,25 @@
 <div class="login-container">
-    <h1>LOGIN</h1>
-    <form (ngSubmit)="login()">
-      <div>
-        <label for="username">Prihlasovacie meno*:</label><br />
-        <input
-          type="text"
-          id="username"
-          class="usern"
-          name="username"
-          [(ngModel)]="username"
-          required
-        />
-      </div>
-      <br />
-      <div>
-        <label for="password">Heslo*:</label><br />
-        <input
-          [type]="showPasswordField ? 'text' : 'password'"
-          id="password"
-          class="passwd"
-          name="password"
-          [(ngModel)]="password"
-          required
-        />
-      </div>
-      <input type="checkbox" (click)="togglePasswordVisibility()" />Show
-      Password<br />
-      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
-      <br />
-      <button type="submit" class="login">Prihlásiť sa</button>
-    </form>
-  </div>
-  
+  <h1>LOGIN</h1>
+  <form (ngSubmit)="login()">
+    <div>
+      <label for="firstName">Meno*:</label><br>
+      <input type="text" id="firstName" [(ngModel)]="firstName" class="name" name="firstName" required />
+    </div>
+    <br>
+    <div>
+      <label for="lastName">Priezvisko*:</label><br>
+      <input type="text" id="lastName" [(ngModel)]="lastName" class="surname" name="lastName" required />
+    </div>
+    <br />
+    <div>
+      <label for="password">Heslo*:</label><br />
+      <input [type]="showPasswordField ? 'text' : 'password'" id="password" class="passwd" name="password"
+        [(ngModel)]="password" required />
+    </div>
+    <input type="checkbox" (click)="togglePasswordVisibility()" />Show
+    Password<br />
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <br />
+    <button type="submit" class="login">Prihlásiť sa</button>
+  </form>
+</div>
