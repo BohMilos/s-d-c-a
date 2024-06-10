@@ -18,7 +18,12 @@
     margin-right: 12px;
   }
 
-  button .details:hover{
+  .details-button {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  
+  .details-button:hover{
     margin-left: 12px;
     margin-right: 12px;
     background-color: gray;
