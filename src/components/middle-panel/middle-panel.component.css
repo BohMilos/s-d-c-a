@@ -21,6 +21,7 @@
   .details-button {
     margin-left: 12px;
     margin-right: 12px;
+    background-color: white;
   }
   
   .details-button:hover{
