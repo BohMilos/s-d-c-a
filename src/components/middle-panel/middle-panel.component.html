@@ -18,7 +18,7 @@
         </div>
   
         <div *ngIf="userPostalInfo">
-          <button (click)="togglePostalInfo()">Toggle Postal Info</button>
+          <button (click)="togglePostalInfo()" class="postal-button">Toggle Postal Info</button>
           <div *ngIf="showPostalInfo">
             <ul class="postal-info">
               <li>PSČ: {{ userPostalInfo['post code'] }}</li>

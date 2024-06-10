@@ -29,6 +29,17 @@
     margin-right: 12px;
     background-color: gray;
     color: white;
+    border-radius: 5%;
+  }
+
+  .postal-button{
+    background-color: white;
+  }
+
+  .postal-button:hover{
+    color: white;
+    background-color: gray;
+    border-radius: 5%;
   }
   
   .postal-info {
