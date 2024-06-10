@@ -5,14 +5,14 @@
         <p>Meno: {{ detailedUserInfo.firstName }}</p>
         <p>Priezvisko: {{ detailedUserInfo.lastName }}</p>
         <p>Užívateľské meno: {{ detailedUserInfo.username }}</p>
-        <p>Dátum narodenia: {{ detailedUserInfo.birthDate }}</p>
-        <p>Farba očí: {{ detailedUserInfo.eyeColor }}</p>
+        <p>Dátum narodenia: {{ detailedUserInfo.birthDate | date:'dd. MM. yyyy' }}</p>
+        <p>Farba očí: {{ getTranslatedEyeColor(detailedUserInfo.eyeColor) }}</p>
         <p>Univerzita: {{ detailedUserInfo.university }}</p>
         <p>IP Adresa: {{ detailedUserInfo.ip }}</p>
         <p>Mac Adresa: {{ detailedUserInfo.macAddress }}</p>
         <p>Mesto: {{ detailedUserInfo.address.city }}</p>
         <div *ngIf="testGenderInfo">
-          <p>Test Pohlavia: {{ testGenderInfo.gender }}</p>
+          <p>Test Pohlavia: {{ getTranslatedGender(testGenderInfo.gender) }}</p>
           <p>Pravdepodobnosť: {{ testGenderInfo.probability * 100 }}%</p>
           <p>Počet: {{ testGenderInfo.count }}</p>
         </div>

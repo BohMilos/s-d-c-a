@@ -1,6 +1,7 @@
 .container{
     max-width: 100%;
     margin: 0 0;
+    background-color: black;
 }
 
 .panels{
@@ -11,10 +12,12 @@
 
 .left{
     width: 25%;
+    border-right: 1px solid white;
 }
 
 .middle{
     width: 50%;
+    border-right: 1px solid white;
 }
 
 .right{

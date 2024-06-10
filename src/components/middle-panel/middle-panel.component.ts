@@ -17,6 +17,22 @@ export class MiddlePanelComponent implements OnChanges {
   showPostalInfo: boolean = true;
   showDetails: boolean = true;
 
+  eyeColorTranslations: { [key: string]: string } = {
+    "Blue": 'modrá',
+    "Green": 'zelená',
+    "Brown": 'hnedá',
+    "Hazel": 'oriešková',
+    "Red": 'červená',
+    "Gray": 'šedá',
+    "Amber": 'jantárová'
+  };
+
+  genderTranslations: { [key: string]: string } = {
+    "male": 'muž',
+    "female": 'žena',
+    "nonbinary": 'nebinárny'
+  };
+
   constructor(private userService: UserService, private http: HttpClient) {}
 
   ngOnChanges(changes: SimpleChanges) {
@@ -54,5 +70,13 @@ export class MiddlePanelComponent implements OnChanges {
 
   toggleDetails() {
     this.showDetails = !this.showDetails;
+  }
+
+  getTranslatedEyeColor(color: string): string {
+    return this.eyeColorTranslations[color] || color;
+  }
+
+  getTranslatedGender(gender: string): string {
+    return this.genderTranslations[gender] || gender;
   }
 }

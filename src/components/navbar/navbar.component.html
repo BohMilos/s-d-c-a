@@ -2,9 +2,9 @@
     <div class="container">
       <div class="brand">Chatuj.sk</div>
       <ul class="nav-links">
-        <li>{{ clickCount }} klikov</li>
-        <li>{{ messageLength }} znakov</li>
-        <li>{{ chatInstancesLength }} četov</li>
+        <li>Kliky: {{ clickCount }}</li>
+        <li>Znaky: {{ messageLength }}</li>
+        <li>Čety: {{ chatInstancesLength }}</li>
         <li *ngIf="loggedInUser">
           Prihlásený užívateľ: {{ loggedInUser.firstName }}
           {{ loggedInUser.lastName }}

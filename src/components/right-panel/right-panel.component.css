@@ -1,7 +1,7 @@
 .right-panel {
-    width: 100%; /* Adjust width as needed */
-    background-color: #f9f9f9;
-    border-left: 1px solid #ccc; /* Add border for separation */
+    width: 100%;
+    background-color: black;
+    margin-left: 5px;
   }
   
   .chat-history {
@@ -16,17 +16,20 @@
   
   .message-sender {
     margin: 0;
+    color: white;
   }
   
   .user-message {
     text-align: right;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    color: white;
   }
   
   .recipient-message p.server-response {
     word-wrap: break-word;
     overflow-wrap: break-word;
+    color: white;
   }
   
   .recepient-message{
