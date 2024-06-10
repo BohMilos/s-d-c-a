@@ -17,6 +17,13 @@
     margin-left: 12px;
     margin-right: 12px;
   }
+
+  .details:hover{
+    margin-left: 12px;
+    margin-right: 12px;
+    background-color: gray;
+    color: white;
+  }
   
   .postal-info {
     list-style-type: none;
