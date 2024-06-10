@@ -59,7 +59,7 @@
     border-radius: 5%;
   }
 
-  .clear-chat-button{
+  .clear-chat-button:hover{
     border-radius: 5%;
     background-color: gray;
     color: white;
