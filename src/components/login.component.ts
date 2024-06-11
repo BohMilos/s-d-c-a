@@ -8,9 +8,9 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  firstName: string = '';
-  lastName: string = '';
-  password: string = '';
+  firstName: string = ''; /*napr. Emily*/
+  lastName: string = '';  /*napr. Johnson*/
+  password: string = ''; /*napr. emilyspass*/
   errorMessage: string = '';
   showPasswordField: boolean = false;
 
